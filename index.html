@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Sorry My Baby</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+    .card {
+      background: white;
+      padding: 2.5rem;
+      max-width: 500px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    h1 {
+      color: #ff4d6d;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #444;
+      line-height: 1.6;
+      font-size: 1.05rem;
+      margin: 1rem 0;
+    }
+    .heart {
+      font-size: 3rem;
+      animation: beat 1.2s infinite;
+      margin: 1rem 0;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .hidden {
+      display: none;
+      margin-top: 1.2rem;
+      color: #222;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>I'm Sorry My Love </h1>
+    <div class="heart">❤️</div>
+    <p>
+      Hi my love,
+      <br /><br />
+      I know I messed up, and I keep bringing things up. That was never my intention.
+      You mean the world to me, and I hate it whenever I do this. I'm gonna stop it from now on. I do understand it and I'm sorry for ruining your sleep and your mornings for the past few days.
+    </p>
+    <p>
+      I promise to do better.
+      I'm sorry my baby.
+    <button onclick="showMessage()">Click if you still love me 🤍</button>
+    <div id="msg" class="hidden">
+      Thank you for reading this. I love you the most my cutie. 💕
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('msg').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
